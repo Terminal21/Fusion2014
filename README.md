@@ -4,7 +4,7 @@ Gollum ist ein Offline-Wiki powered by git. Das bedeutet, ihr könnt das Wiki di
 
 ## Bitbucket
 
-Wenn ihr eigene Änderungen am Wiki für alle zugänglich machen wollt, benötigt ihr einen [Bitbucket](https://bitbucket.org/) Account. Außerdem müsst ihr im Terminal.21-Team sein. Stefan ansprechen.
+Wenn ihr eigene Änderungen am Wiki für alle zugänglich machen wollt, benötigt ihr einen [GitHub](https://gitthub.com/) Account. Außerdem müsst ihr im Terminal21 sein. Stefan ansprechen.
 
 ## Vorbereitung
 
@@ -13,9 +13,9 @@ Wenn ihr eigene Änderungen am Wiki für alle zugänglich machen wollt, benötig
 `sudo gem install gollum --no-ri --no-rdoc`
 
 ## Wiki-Content initial auschecken
-`git clone https://<BITBUCKET_USERNAME>@bitbucket.org/terminal21/fusion2013.git`
+`git clone git@github.com:Terminal21/Fusion2014.git`
 
-`cd fusion2013`
+`cd Fusion2014`
 
 ## Wiki lokal starten
 
