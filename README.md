@@ -2,7 +2,7 @@
 
 Gollum ist ein Offline-Wiki powered by git. Das bedeutet, ihr könnt das Wiki direkt auf eurem Rechner auch ohne Internet-Access benutzen und die bestehende Doku lesen.
 
-## Bitbucket
+## GitHub
 
 Wenn ihr eigene Änderungen am Wiki für alle zugänglich machen wollt, benötigt ihr einen [GitHub](https://gitthub.com/) Account. Außerdem müsst ihr im Terminal21 sein. Stefan ansprechen.
 
