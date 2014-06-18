@@ -1,23 +1,21 @@
-Oase Mesh
+# Oase Mesh
 
 Doku aus dem letzem Jahr:
 
 Also Prinzipiell schauts jetzt so aus:
 
-Die Clients im Wifi sollen am Ende eine IP aus dem
-10.10.0.0-10.10.253.254 bekommen... Das ist also ein knapes /16 an dem
-am ende das 10.10.254.0/24 fehlt. Das ist das Management-Subnet. Alle
-Router haben eine IP aus diesem Netz - Die sind selbst /24 damit kein
-DAU auf die geräte drauf kommt..
+Clients: 10.10.0.0 - 10.10.253.254 (~/16)
+
+Management Netz: 10.10.254.0/24 
 
 Der Border-Mesh-Router ist das Batman-Adv Gateway.. dieser hat die
-10.10.254.254 und routet gegen die Firewall auf einem Transportnetz -
-dem 10.11.0.0/24 (Ich weis - ist viel zu groß - aber verständlicher)
- hat also die 10.11.0.1 und schickt den Verkehr an 10.11.0.254 (Die
+10.10.254.254 und routet gegen die Firewall auf einem Transportnetz (10.11.0.0/24)
+
+hat also die 10.11.0.1 und schickt den Verkehr an 10.11.0.254 (Die
 Firewall)
+
 DHCP-Requests aus dem Wifi schlagen auf dem Border-Mesh-GW auf und
 werden an die Firewall mittels dhcp-fwd geforwarded.. (Config anbei)
-
 
 Ich hab die Firewall hier im Testsetup mit einem OpenWrt-Router
 gestellt... Deswegen hier die Beispiel-Config für den DNSMASQ wenn
