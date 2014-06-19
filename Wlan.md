@@ -223,10 +223,10 @@ DHCP-Forwarder
 /etc/dhcp-fwd.conf:
 
 
-`user            0
+user            0
 group           0
 
-#chroot         /var/run/dhcp-fwd
+> chroot         /var/run/dhcp-fwd
 
 logfile         /var/dhcp-fwd.log
 loglevel        0
@@ -236,7 +236,7 @@ pidfile         /var/run/dhcp-fwd.pid
 if      br-lan  true    false   true
 if      eth0    false   true    true
 
-server  ip      10.11.0.1`
+server  ip      10.11.0.1
 
 
 
