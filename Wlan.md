@@ -1,12 +1,11 @@
 
-
 ## Oase Mesh
 
 Doku aus dem letzem Jahr:
 
 Also Prinzipiell schauts jetzt so aus:
 
-Clients: 10.10.0.0 - 10.10.253.254 (~/16)
+Clients: 10.10.0.0 - 10.10.253.254 (~/16 [255.255.0.0])
 
 Management Netz: 10.10.254.0/24 
 
