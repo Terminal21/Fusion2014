@@ -383,9 +383,9 @@ Danach Reboot...
 
 opkg update
 
-opkg install kmod-batman-adv
+`opkg install kmod-batman-adv`
 
-uci set network.mesh=interface
+`uci set network.mesh=interface
 
 uci set network.mesh.proto=none
 
@@ -461,7 +461,7 @@ uci set batman-adv.@mesh[0].vis_mode=client
 
 uci set batman-adv.@mesh[0].bridge_loop_avoidance=1
 
-uci commit batman-adv
+uci commit batman-adv`
 
 
 --------------------------------------------------
