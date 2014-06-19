@@ -226,7 +226,7 @@ DHCP-Forwarder
 user            0
 group           0
 
-> chroot         /var/run/dhcp-fwd
+~#chroot         /var/run/dhcp-fwd
 
 logfile         /var/dhcp-fwd.log
 loglevel        0
