@@ -1,13 +1,20 @@
-
 ## Oase Mesh
 
 Doku aus dem letzem Jahr:
 
 Also Prinzipiell schauts jetzt so aus:
 
-Clients: 10.10.0.0 - 10.10.253.254 (~/16 [255.255.0.0])
+Clients: '10.10.0.0 - 10.10.253.254 (~/16 [255.255.0.0])'
+Management Netz: '10.10.254.0/24'
+Firewall: '10.11.0.254'
+          'rückroute auf 10.10.0.0/16 [10.11.0.1 (Border-Mesh-GW)]
+Transportnetz: '10.11.0.0./24'
+* GW1 '10.11.0.1' und '10.10.254.254'
+* N1 '10.10.254.1'
+* AP1[AP1](#AP1 - Access-Node) '10.10.254.101
 
-Management Netz: 10.10.254.0/24 
+
+'
 
 Der Border-Mesh-Router ist das Batman-Adv Gateway.. dieser hat die
 10.10.254.254 und routet gegen die Firewall auf einem Transportnetz (10.11.0.0/24)
@@ -21,13 +28,9 @@ werden an die Firewall mittels dhcp-fwd geforwarded.. (Config anbei)
 Ich hab die Firewall hier im Testsetup mit einem OpenWrt-Router
 gestellt... Deswegen hier die Beispiel-Config für den DNSMASQ wenn
 DHCP-Requests von einem DHCP Relay-Agent kommen... Wie das auf der pf
-geht muss stefan rausfinden... Sollte ja aber kein Act sein. Die
-Firewall braucht unterdessen eine Rückroute nach 10.10.0.0/16 auf die
+geht muss stefan rausfinden... Sollte ja aber kein Act sein. 
+Die Firewall braucht unterdessen eine Rückroute nach 10.10.0.0/16 auf die
 10.11.0.1 (Border-Mesh-GW) - klar
-
-
-
-Passwörter Sollten klar sein.... 
 
 Nochmal zur anmerkung.. Es ist 8.8.8.8 auf den Kisten als DNS-Server
 eingetragen....
@@ -337,7 +340,7 @@ uci commit batman-adv
 
 ##################################
 
-AP1 - Access-Node
+### AP1 - Access-Node
 
 
 Verfält sich fast genauso, hier nur die Unterschiede:
