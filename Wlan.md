@@ -425,69 +425,37 @@ uci set batman-adv.@mesh[0].vis_mode=client
 uci set batman-adv.@mesh[0].bridge_loop_avoidance=1
 uci commit batman-adv
 
-- ------------------------------------------------
-
-
-
-
-Automatisierung der Visualisierung und das Frontent als tar.gz kommt
-noch kommt noch...
-
-
+--------------------------------------------------
 
 Ich mach jetzt noch die bat-hosts für die Kisten damit das nicht so
 aussieht:
 
-
-root@ap1:~# batctl o
-[B.A.T.M.A.N. adv 2012.3.0, MainIF/MAC: eth1/f8:d1:11:55:93:8b (bat0)]
-  Originator      last-seen (#/255)           Nexthop [outgoingIF]:
-Potential nexthops ...
-a0:f3:c1:64:56:6f    0.150s   (255) a0:f3:c1:64:56:6f [      eth1]:
-a0:f3:c1:64:56:6f (255)
-a0:f3:c1:64:57:17    0.810s   (225) a0:f3:c1:64:56:6f [      eth1]:
-
-a0:f3:c1:64:56:6f (225)
-
-a0:f3:c1:64:57:5b    0.210s   (225) a0:f3:c1:64:56:6f [      eth1]:
-
-a0:f3:c1:64:56:6f (225)
-
-f8:d1:11:23:3f:db    0.950s   (188) a0:f3:c1:64:56:6f [      eth1]:
-
-a0:f3:c1:64:56:6f (188)
-
-a0:f3:c1:64:57:50    0.280s   (220) a0:f3:c1:64:56:6f [      eth1]:
-
-a0:f3:c1:64:56:6f (220)
-
-a0:f3:c1:64:55:bc    1.280s   (217) a0:f3:c1:64:56:6f [      eth1]:
-
-a0:f3:c1:64:56:6f (217)
-
-f8:d1:11:55:99:89    0.530s   (196) a0:f3:c1:64:56:6f [      eth1]:
-
-a0:f3:c1:64:56:6f (196)
-
-a0:f3:c1:64:57:0b    0.210s   (221) a0:f3:c1:64:56:6f [      eth1]:
-
-a0:f3:c1:64:56:6f (221)
-
-a0:f3:c1:64:55:bb    0.210s   (221) a0:f3:c1:64:56:6f [      eth1]:
-
-a0:f3:c1:64:56:6f (221)
-
-f8:d1:11:55:99:3f    0.530s   (198) a0:f3:c1:64:56:6f [      eth1]:
-
-a0:f3:c1:64:56:6f (198)
-
-f8:d1:11:55:94:73    0.530s   (198) a0:f3:c1:64:56:6f [      eth1]:
-
-a0:f3:c1:64:56:6f (198)
-
-a0:f3:c1:64:57:18   46.740s   (223) a0:f3:c1:64:56:6f [      eth1]:
-
-a0:f3:c1:64:56:6f (223)
-
-root@ap1:~#
-
+* root@ap1:~# batctl o
+* [B.A.T.M.A.N. adv 2012.3.0, MainIF/MAC: eth1/f8:d1:11:55:93:8b (bat0)]
+*   Originator      last-seen (#/255)           Nexthop [outgoingIF]:
+* Potential nexthops ...
+* a0:f3:c1:64:56:6f    0.150s   (255) a0:f3:c1:64:56:6f [      eth1]:
+* a0:f3:c1:64:56:6f (255)
+* a0:f3:c1:64:57:17    0.810s   (225) a0:f3:c1:64:56:6f [      eth1]:
+* a0:f3:c1:64:56:6f (225)
+* a0:f3:c1:64:57:5b    0.210s   (225) a0:f3:c1:64:56:6f [      eth1]:
+* a0:f3:c1:64:56:6f (225)
+* f8:d1:11:23:3f:db    0.950s   (188) a0:f3:c1:64:56:6f [      eth1]:
+* a0:f3:c1:64:56:6f (188)
+* a0:f3:c1:64:57:50    0.280s   (220) a0:f3:c1:64:56:6f [      eth1]:
+* a0:f3:c1:64:56:6f (220)
+* a0:f3:c1:64:55:bc    1.280s   (217) a0:f3:c1:64:56:6f [      eth1]:
+* a0:f3:c1:64:56:6f (217)
+* f8:d1:11:55:99:89    0.530s   (196) a0:f3:c1:64:56:6f [      eth1]:
+* a0:f3:c1:64:56:6f (196)
+* a0:f3:c1:64:57:0b    0.210s   (221) a0:f3:c1:64:56:6f [      eth1]:
+* a0:f3:c1:64:56:6f (221)
+* a0:f3:c1:64:55:bb    0.210s   (221) a0:f3:c1:64:56:6f [      eth1]:
+* a0:f3:c1:64:56:6f (221)
+* f8:d1:11:55:99:3f    0.530s   (198) a0:f3:c1:64:56:6f [      eth1]:
+* a0:f3:c1:64:56:6f (198)
+* f8:d1:11:55:94:73    0.530s   (198) a0:f3:c1:64:56:6f [      eth1]:
+* a0:f3:c1:64:56:6f (198)
+* a0:f3:c1:64:57:18   46.740s   (223) a0:f3:c1:64:56:6f [      eth1]:
+* a0:f3:c1:64:56:6f (223)
+* root@ap1:~#
