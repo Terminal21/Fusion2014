@@ -382,53 +382,95 @@ Danach Reboot...
 
 
 opkg update
+
 opkg install kmod-batman-adv
 
 uci set network.mesh=interface
+
 uci set network.mesh.proto=none
+
 uci set network.mesh.mtu=1528
+
 uci set network.mesh.ifname=eth1
+
 uci set network.wan.proto=none
+
 uci set network.wan.mtu=1528
+
 uci set network.wan.ifname='eth0'
+
 uci set network.lan.proto=static
+
 uci set network.lan.ipaddr='10.10.254.101'
+
 uci set network.lan.netmask='255.255.255.0'
+
 uci set network.lan.gateway='10.10.254.254'
+
 uci set network.lan.dns='8.8.8.8'
+
 uci set network.lan.ifname='bat0 eth0'
+
 uci commit network
 
+
+
 uci set wireless.@wifi-device[0].disabled=0
+
 uci set wireless.@wifi-device[0].hwmode=11ng
+
 uci set wireless.@wifi-device[0].channel=2
+
 uci set wireless.@wifi-iface[0].mode=ap
+
 uci set wireless.@wifi-iface[0].network=lan
+
 uci set wireless.@wifi-iface[0].ssid=oase
+
 uci commit wireless
 
+
+
 uci set dhcp.@dhcp[0].ignore=1
+
 uci commit dhcp
 
+
 uci set system.@system[0].hostname=ap1
+
 uci commit system
 
+
 uci set batman-adv.@mesh[0].interfaces=eth1
+
 uci set batman-adv.@mesh[0].aggregated_ogms=1
+
 uci set batman-adv.@mesh[0].ap_isolation=0
+
 uci set batman-adv.@mesh[0].bonding=0
+
 uci set batman-adv.@mesh[0].fragmentation=1
+
 uci set batman-adv.@mesh[0].gw_mode=client
+
 uci set batman-adv.@mesh[0].log_level=0
+
 uci set batman-adv.@mesh[0].orig_interval=1000
+
 uci set batman-adv.@mesh[0].vis_mode=client
+
 uci set batman-adv.@mesh[0].bridge_loop_avoidance=1
+
 uci commit batman-adv
+
 
 --------------------------------------------------
 
+
+
 Ich mach jetzt noch die bat-hosts für die Kisten damit das nicht so
 aussieht:
+
 
 * root@ap1:~# batctl o
 * [B.A.T.M.A.N. adv 2012.3.0, MainIF/MAC: eth1/f8:d1:11:55:93:8b (bat0)]
