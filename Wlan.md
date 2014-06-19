@@ -4,14 +4,14 @@ Doku aus dem letzem Jahr:
 
 Also Prinzipiell schauts jetzt so aus:
 
-Clients: '10.10.0.0 - 10.10.253.254 (~/16 [255.255.0.0])'
-Management Netz: '10.10.254.0/24'
-Firewall: `10.11.0.254`
-          'rückroute auf 10.10.0.0/16 [10.11.0.1 (Border-Mesh-GW)]
-Transportnetz: '10.11.0.0./24'
-* [GW](#GW) '10.11.0.1' und '10.10.254.254'
-* [N1](#N1) '10.10.254.1'
-* [AP1](#AP1) '10.10.254.101
+Clients: `10.10.0.0 - 10.10.253.254 (~/16 [255.255.0.0])`
+Management Netz: `10.10.254.0/24`
+Firewall:  `10.11.0.254`
+           `rückroute auf 10.10.0.0/16 [10.11.0.1 (Border-Mesh-GW)]`
+Transportnetz:  '10.11.0.0./24'
+* [GW](#GW)  `10.11.0.1` und `10.10.254.254`
+* [N1](#N1)  `10.10.254.1`
+* [AP1](#AP1)  `10.10.254.101`
 
 
 '
