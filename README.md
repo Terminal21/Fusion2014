@@ -8,7 +8,7 @@ Wenn ihr eigene Änderungen am Wiki für alle zugänglich machen wollt, benötig
 
 ## Vorbereitung
 
-`sudo aptitude install rubygems git libxml2-dev libxslt1-dev`
+`sudo aptitude install rubygems git libxml2-dev libxslt1-dev ruby-dev`
 
 `sudo gem install gollum --no-ri --no-rdoc`
 
