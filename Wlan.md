@@ -53,6 +53,7 @@ Im moment ist da irgendwas eingestellt...
 Also:
 
 uci set wireless.@wifi-device[0].channel=[5,8,11]
+
 uci commit wireless
 
 
@@ -74,7 +75,9 @@ Das einfach in die /etc/dnsmasq.conf reinschieben
 dhcp-range=set:hot,10.10.0.0,10.10.253.254,255.255.0.0,120h
 
 server=/hot/10.10.254.254
+
 dhcp-option=tag:hot,option:router,10.10.254.254
+
 dhcp-option=tag:hot,option:dns-server,8.8.8.8
 
 
@@ -168,48 +171,85 @@ in /etc/dhcp-fwd abgeschmissen werden..
 
 
 opkg update
+
 opkg install kmod-batman-adv dhcp-fwd
 
+
 uci set network.mesh='interface'
+
 uci set network.mesh.proto='none'
+
 uci set network.mesh.mtu='1528'
+
 uci set network.lan.proto='static'
+
 uci set network.lan.ipaddr='10.10.254.254'
+
 uci set network.lan.netmask='255.255.255.0'
+
 uci set network.lan.ifname='bat0 eth1'
+
 uci set network.wan.ifname='eth0'
+
 uci set network.wan.proto='static'
+
+
 uci set network.wan.ipaddr='10.11.0.254'
+
 uci set network.wan.netmask='255.255.255.0'
+
 uci set network.wan.gateway='10.11.0.1'
+
 uci set network.wan.dns='8.8.8.8'
+
 uci commit network
 
+
 uci set wireless.@wifi-device[0].disabled=0
+
 uci set wireless.@wifi-device[0].hwmode=11ng
+
 uci set wireless.@wifi-device[0].channel=1
+
 uci set wireless.@wifi-iface[0].mode=adhoc
+
 uci set wireless.@wifi-iface[0].ssid=mesh
+
 uci set wireless.@wifi-iface[0].network=mesh
+
 uci set wireless.@wifi-iface[0].bssid=02:BA:FF:EE:BA:BE
+
 uci commit wireless
 
+
 uci set dhcp.@dhcp[0].ignore=1
+
 uci commit dhcp
 
 uci set system.@system[0].hostname=gw1
+
 uci commit system
 
 uci set batman-adv.@mesh[0].interfaces=mesh
+
 uci set batman-adv.@mesh[0].aggregated_ogms=1
+
 uci set batman-adv.@mesh[0].ap_isolation=0
+
 uci set batman-adv.@mesh[0].bonding=0
+
 uci set batman-adv.@mesh[0].fragmentation=1
+
 uci set batman-adv.@mesh[0].gw_mode=server
+
 uci set batman-adv.@mesh[0].log_level=0
+
 uci set batman-adv.@mesh[0].orig_interval=1000
+
 uci set batman-adv.@mesh[0].vis_mode=server
+
 uci set batman-adv.@mesh[0].bridge_loop_avoidance=1
+
 uci commit batman-adv
 
 
@@ -218,7 +258,7 @@ Jetzt NAT übers WEB-IF ausschalten (siehe oben)
 
 
 DHCP-Forwarder
-- --------------
+---------------
 
 /etc/dhcp-fwd.conf:
 
@@ -291,53 +331,90 @@ Danach Reboot...
 
 
 opkg update
+
 opkg install kmod-batman-adv
 
+
 uci set network.mesh='interface'
+
 uci set network.mesh.proto='none'
+
 uci set network.mesh.mtu='1528'
+
 uci set network.lan.proto='static'
+
 uci set network.lan.ipaddr='10.10.254.1'
+
 uci set network.lan.netmask='255.255.255.0'
+
 uci set network.lan.gateway='10.10.254.254'
+
 uci set network.lan.dns='8.8.8.8'
+
 uci set network.lan.ifname='bat0 eth1'
+
 uci set network.wan.proto='none'
+
 uci set network.wan.mtu='1528'
+
 uci set network.wan.ifname='eth0'
+
 uci commit network
 
+
+
 uci set wireless.@wifi-device[0].disabled=0
+
 uci set wireless.@wifi-device[0].hwmode=11ng
+
 uci set wireless.@wifi-device[0].channel=1
+
 uci set wireless.@wifi-iface[0].mode=adhoc
+
 uci set wireless.@wifi-iface[0].ssid=mesh
+
 uci set wireless.@wifi-iface[0].network=mesh
+
 uci set wireless.@wifi-iface[0].bssid=02:BA:FF:EE:BA:BE
+
 uci commit wireless
 
+
+
 uci set dhcp.@dhcp[0].ignore=1
+
 uci commit dhcp
 
+
 uci set system.@system[0].hostname=n1
+
 uci commit system
 
+
 uci set batman-adv.@mesh[0].interfaces='mesh eth0'
+
 uci set batman-adv.@mesh[0].aggregated_ogms=1
+
 uci set batman-adv.@mesh[0].ap_isolation=0
+
 uci set batman-adv.@mesh[0].bonding=0
+
 uci set batman-adv.@mesh[0].fragmentation=1
+
 uci set batman-adv.@mesh[0].gw_mode=client
+
 uci set batman-adv.@mesh[0].log_level=0
+
 uci set batman-adv.@mesh[0].orig_interval=1000
+
 uci set batman-adv.@mesh[0].vis_mode=client
+
 uci set batman-adv.@mesh[0].bridge_loop_avoidance=1
+
 uci commit batman-adv
 
 
-
-
-##################################
+#################################
 <a name="AP1"/>
 ### AP1 - Access-Node
 
