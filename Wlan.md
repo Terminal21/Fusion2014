@@ -9,8 +9,8 @@ Management Netz: '10.10.254.0/24'
 Firewall: '10.11.0.254'
           'rückroute auf 10.10.0.0/16 [10.11.0.1 (Border-Mesh-GW)]
 Transportnetz: '10.11.0.0./24'
-* GW1 '10.11.0.1' und '10.10.254.254'
-* N1 '10.10.254.1'
+* [GW](#GW1)1 '10.11.0.1' und '10.10.254.254'
+* [N1](#N1) '10.10.254.1'
 * [AP1](#AP1) '10.10.254.101
 
 
@@ -83,8 +83,8 @@ dhcp-option=tag:hot,option:dns-server,8.8.8.8
 
 
 ##################################
-
-Border-Mesh-GW
+<a name="GW"/>
+### GW - Border-Mesh-GW
 
 Nun die Config vom Border-Mesh-GW.. Ich hatte ja schon angemerkt das
 hier ein generisches 12.09 aus dem OpenWrt-Download-Mirror benutzt
@@ -249,8 +249,8 @@ server  ip      10.11.0.1
 
 
 ##################################
-
-N1 - Infrastruktur-Node
+<a name="N1"/>
+### N1 - Infrastruktur-Node
 
 
 Verfält sich fast genauso, hier nur die Unterschiede:
