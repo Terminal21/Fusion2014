@@ -12,11 +12,11 @@ Firewall:  `10.11.0.254`
            `rückroute auf 10.10.0.0/16 [10.11.0.1 (Border-Mesh-GW)]`
 Transportnetz:  `10.11.0.0./24`
 
-* [GW](#GW)  `10.11.0.1` und `10.10.254.254`
-* [N1](#N1)  `10.10.254.1`
-* [AP1](#AP1)  `10.10.254.101`
+* [GW](#GW) WR841N  `10.11.0.1` und `10.10.254.254`
+* [N1](#N1) WR841N `10.10.254.1`
+* [AP1](#AP1) WR741N `10.10.254.101`
 
-
+Bei den WR841N ist das LAN eth1 und WAN ist eth0 Bei den WR741ND ist LAN eth0 und WAN eth1
 '
 
 Der Border-Mesh-Router ist das Batman-Adv Gateway.. dieser hat die
